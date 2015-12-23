@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07D3B013B63D0C54BCAF9C16 /* Pods_PulseTeach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FA6D4D7067256C92484377 /* Pods_PulseTeach.framework */; };
 		123AE4761C29F90D0008CB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123AE4751C29F90D0008CB21 /* AppDelegate.swift */; };
 		123AE4781C29F90D0008CB21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123AE4771C29F90D0008CB21 /* ViewController.swift */; };
 		123AE47B1C29F90D0008CB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 123AE4791C29F90D0008CB21 /* Main.storyboard */; };
@@ -14,6 +15,10 @@
 		123AE4801C29F90D0008CB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 123AE47E1C29F90D0008CB21 /* LaunchScreen.storyboard */; };
 		123AE48B1C29F90D0008CB21 /* PulseTeachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123AE48A1C29F90D0008CB21 /* PulseTeachTests.swift */; };
 		123AE4961C29F90D0008CB21 /* PulseTeachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123AE4951C29F90D0008CB21 /* PulseTeachUITests.swift */; };
+		1251C90F1C2A02F200EB2B43 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1251C90C1C2A02F200EB2B43 /* Question.swift */; };
+		1251C9101C2A02F200EB2B43 /* ClassSession_Beta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1251C90D1C2A02F200EB2B43 /* ClassSession_Beta.swift */; };
+		1251C9111C2A02F200EB2B43 /* PulseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1251C90E1C2A02F200EB2B43 /* PulseClass.swift */; };
+		1251C9141C2A033800EB2B43 /* AddQuestionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1251C9131C2A033800EB2B43 /* AddQuestionFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,13 @@
 		123AE4911C29F90D0008CB21 /* PulseTeachUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulseTeachUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		123AE4951C29F90D0008CB21 /* PulseTeachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseTeachUITests.swift; sourceTree = "<group>"; };
 		123AE4971C29F90D0008CB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1251C90C1C2A02F200EB2B43 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1251C90D1C2A02F200EB2B43 /* ClassSession_Beta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassSession_Beta.swift; sourceTree = "<group>"; };
+		1251C90E1C2A02F200EB2B43 /* PulseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseClass.swift; sourceTree = "<group>"; };
+		1251C9131C2A033800EB2B43 /* AddQuestionFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddQuestionFormViewController.swift; sourceTree = "<group>"; };
+		4C30BFB694812DAC286C2DB9 /* Pods-PulseTeach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseTeach.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulseTeach/Pods-PulseTeach.release.xcconfig"; sourceTree = "<group>"; };
+		81FA6D4D7067256C92484377 /* Pods_PulseTeach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulseTeach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3582DA3E3F0433B97F80BC0 /* Pods-PulseTeach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseTeach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulseTeach/Pods-PulseTeach.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D3B013B63D0C54BCAF9C16 /* Pods_PulseTeach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1085E044A9843CD2B2F40251 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3582DA3E3F0433B97F80BC0 /* Pods-PulseTeach.debug.xcconfig */,
+				4C30BFB694812DAC286C2DB9 /* Pods-PulseTeach.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		123AE4691C29F90C0008CB21 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				123AE4891C29F90D0008CB21 /* PulseTeachTests */,
 				123AE4941C29F90D0008CB21 /* PulseTeachUITests */,
 				123AE4731C29F90C0008CB21 /* Products */,
+				1085E044A9843CD2B2F40251 /* Pods */,
+				D4EB27DE48DB5E9EA80C064A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +121,9 @@
 		123AE4741C29F90C0008CB21 /* PulseTeach */ = {
 			isa = PBXGroup;
 			children = (
+				1251C90A1C2A02DE00EB2B43 /* Models */,
 				123AE4751C29F90D0008CB21 /* AppDelegate.swift */,
-				123AE4771C29F90D0008CB21 /* ViewController.swift */,
+				1251C9121C2A030400EB2B43 /* Controllers */,
 				123AE4791C29F90D0008CB21 /* Main.storyboard */,
 				123AE47C1C29F90D0008CB21 /* Assets.xcassets */,
 				123AE47E1C29F90D0008CB21 /* LaunchScreen.storyboard */,
@@ -125,6 +150,41 @@
 			path = PulseTeachUITests;
 			sourceTree = "<group>";
 		};
+		1251C90A1C2A02DE00EB2B43 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1251C90B1C2A02E400EB2B43 /* Parse Objects */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1251C90B1C2A02E400EB2B43 /* Parse Objects */ = {
+			isa = PBXGroup;
+			children = (
+				1251C90C1C2A02F200EB2B43 /* Question.swift */,
+				1251C90D1C2A02F200EB2B43 /* ClassSession_Beta.swift */,
+				1251C90E1C2A02F200EB2B43 /* PulseClass.swift */,
+			);
+			name = "Parse Objects";
+			sourceTree = "<group>";
+		};
+		1251C9121C2A030400EB2B43 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				123AE4771C29F90D0008CB21 /* ViewController.swift */,
+				1251C9131C2A033800EB2B43 /* AddQuestionFormViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D4EB27DE48DB5E9EA80C064A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81FA6D4D7067256C92484377 /* Pods_PulseTeach.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 123AE49A1C29F90D0008CB21 /* Build configuration list for PBXNativeTarget "PulseTeach" */;
 			buildPhases = (
+				433C2267269CF97C8D0105E9 /* Check Pods Manifest.lock */,
 				123AE46E1C29F90C0008CB21 /* Sources */,
 				123AE46F1C29F90C0008CB21 /* Frameworks */,
 				123AE4701C29F90C0008CB21 /* Resources */,
+				003A805F5B82058F28D37E9E /* Embed Pods Frameworks */,
+				E0E2D73CE04B57AC059BC8BA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,13 +314,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		003A805F5B82058F28D37E9E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulseTeach/Pods-PulseTeach-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		433C2267269CF97C8D0105E9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0E2D73CE04B57AC059BC8BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulseTeach/Pods-PulseTeach-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		123AE46E1C29F90C0008CB21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1251C90F1C2A02F200EB2B43 /* Question.swift in Sources */,
 				123AE4781C29F90D0008CB21 /* ViewController.swift in Sources */,
+				1251C9141C2A033800EB2B43 /* AddQuestionFormViewController.swift in Sources */,
 				123AE4761C29F90D0008CB21 /* AppDelegate.swift in Sources */,
+				1251C9101C2A02F200EB2B43 /* ClassSession_Beta.swift in Sources */,
+				1251C9111C2A02F200EB2B43 /* PulseClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +512,7 @@
 		};
 		123AE49B1C29F90D0008CB21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3582DA3E3F0433B97F80BC0 /* Pods-PulseTeach.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PulseTeach/Info.plist;
@@ -408,6 +524,7 @@
 		};
 		123AE49C1C29F90D0008CB21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C30BFB694812DAC286C2DB9 /* Pods-PulseTeach.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PulseTeach/Info.plist;
@@ -484,6 +601,7 @@
 				123AE49C1C29F90D0008CB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		123AE49D1C29F90D0008CB21 /* Build configuration list for PBXNativeTarget "PulseTeachTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +610,7 @@
 				123AE49F1C29F90D0008CB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		123AE4A01C29F90D0008CB21 /* Build configuration list for PBXNativeTarget "PulseTeachUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +619,7 @@
 				123AE4A21C29F90D0008CB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

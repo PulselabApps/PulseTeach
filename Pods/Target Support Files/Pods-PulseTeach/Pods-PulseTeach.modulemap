@@ -1,0 +1,6 @@
+framework module Pods_PulseTeach {
+  umbrella header "Pods-PulseTeach-umbrella.h"
+
+  export *
+  module * { export * }
+}
