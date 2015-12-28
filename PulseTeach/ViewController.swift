@@ -22,16 +22,21 @@ class ViewController: UIViewController , PFLogInViewControllerDelegate {
     }
     
     override func viewDidLayoutSubviews() {
-        if !isLoggedIn {
-            if let _ = PFUser.currentUser() {
-                isLoggedIn = true
-            } else {
-                let logInController = PFLogInViewController()
-                logInController.delegate = self
-                logInController.fields = [.UsernameAndPassword, .LogInButton]
-                self.presentViewController(logInController, animated: true, completion: nil)
-            }
-        }
+        let logInController = PFLogInViewController()
+        logInController.delegate = self
+        logInController.fields = [.UsernameAndPassword, .LogInButton]
+        self.presentViewController(logInController, animated: true, completion: nil)
+        
+//        if !isLoggedIn {
+//            if let _ = PFUser.currentUser() {
+//                isLoggedIn = true
+//            } else {
+//                let logInController = PFLogInViewController()
+//                logInController.delegate = self
+//                logInController.fields = [.UsernameAndPassword, .LogInButton]
+//                self.presentViewController(logInController, animated: true, completion: nil)
+//            }
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,11 +47,35 @@ class ViewController: UIViewController , PFLogInViewControllerDelegate {
     // MARK -: PFLogInViewControllerDelegate
     
     func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username: String, password: String) -> Bool {
-        return true
+        
+        let requestParams = ["username": username]
+        
+        do {
+            let x = try PFCloud.callFunction("isTeacher", withParameters: requestParams)
+            print("All Good")
+            return true
+        } catch(_) {
+            print("error")
+            return false
+        }
+        
+        
+//        return true
     }
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         print(user.username!)
+
+//        let roleACL = PFACL()
+//        roleACL.publicReadAccess = true
+//        let role = PFRole(name: "Teacher", acl: roleACL)
+//        role.users.addObject(user)
+//        role.saveInBackgroundWithBlock { (success, error) -> Void in
+//            if error == nil && success {
+//                print("Blarg")
+//            }
+//        }
+        
         self.dismissViewControllerAnimated(true) { () -> Void in
             self.isLoggedIn = true
         }
