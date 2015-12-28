@@ -51,7 +51,7 @@ class ViewController: UIViewController , PFLogInViewControllerDelegate {
         let requestParams = ["username": username]
         
         do {
-            let x = try PFCloud.callFunction("isTeacher", withParameters: requestParams)
+            _ = try PFCloud.callFunction("isTeacher", withParameters: requestParams)
             print("All Good")
             return true
         } catch(_) {
@@ -76,8 +76,10 @@ class ViewController: UIViewController , PFLogInViewControllerDelegate {
 //            }
 //        }
         
-        self.dismissViewControllerAnimated(true) { () -> Void in
-            self.isLoggedIn = true
+        ClassCollectionModel.sharedInstance.initializeClassesTaught { () -> Void in
+            self.dismissViewControllerAnimated(true) { () -> Void in
+                self.isLoggedIn = true
+            }
         }
     }
 
