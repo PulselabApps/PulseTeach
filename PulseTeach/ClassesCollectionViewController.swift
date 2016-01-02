@@ -24,6 +24,8 @@ class ClassesCollectionViewController: UICollectionViewController {
 //        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        self.collectionView!.backgroundColor = ColorConstants.GrayNormalButtonColor
+        self.collectionView!.contentOffset = CGPoint(x: 25, y: 25)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,15 +33,25 @@ class ClassesCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "toClassSummary" {
+            print("To summary")
+            if let currentClass = sender as? PulseClass {
+                if let classSummaryVC = segue.destinationViewController as? ClassSummaryViewController {
+                    classSummaryVC.currentClass = currentClass
+                }
+            }
+        }
+        
     }
-    */
+
 
     // MARK: UICollectionViewDataSource
 
@@ -60,11 +72,19 @@ class ClassesCollectionViewController: UICollectionViewController {
         if let cell = cell {
             let classForIndex = model.classAtIndex(indexPath)
             cell.className.text = classForIndex.name
+            cell.backgroundColor = ColorConstants.OrangeAppColor
         }
     
         // Configure the cell
     
         return cell!
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let classForIndex = model.classAtIndex(indexPath)
+        
+        self.performSegueWithIdentifier("toClassSummary", sender: classForIndex)
+        
     }
 
     // MARK: UICollectionViewDelegate

@@ -13,6 +13,19 @@ enum QuestionType : Int {
     case FillInTheBlank
 }
 
+extension QuestionType {
+    static func determineTypeFromString(x : String) -> QuestionType? {
+        switch x {
+            case "Multiple Choice":
+                return .MultipleChoice
+            case "Fill in The Blank":
+                return .FillInTheBlank
+        default:
+            return nil
+        }
+    }
+}
+
 class Question: PFObject, PFSubclassing {
     override class func initialize() {
         struct Static {

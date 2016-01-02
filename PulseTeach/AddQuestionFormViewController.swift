@@ -13,8 +13,24 @@ class AddQuestionFormViewController: FormViewController {
 
     var answerNumber = 0
     
+    var currentClass : PulseClass!
+    
+    var currentClassSession : ClassSession_Beta!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let query = ClassSession_Beta.query()!
+        query.orderByDescending("updatedAt")
+        query.whereKey("classIn", equalTo: self.currentClass)
+        query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
+            if error == nil {
+                if let session = object as? ClassSession_Beta {
+                    self.currentClassSession = session
+                    print("Found Session")
+                }
+            }
+        }
         
         form +++ Section("Question Type")
         
@@ -29,6 +45,7 @@ class AddQuestionFormViewController: FormViewController {
         
             <<< TextAreaRow() {
                 $0.title = "Question Text"
+                $0.tag = "questionTextArea"
                 $0.placeholder = "Question?"
             }
         
@@ -52,12 +69,49 @@ class AddQuestionFormViewController: FormViewController {
         
         // Do any additional setup after loading the view.
     }
-
+//    @NSManaged var questionType : Int
+//    @NSManaged var text : String
+//    @NSManaged var time : Int
+//    @NSManaged var numCorrectAn/swers : Int
+//    @NSManaged var numIncorrectAnswers : Int
+//    @NSManaged var answers : [String]
+//    @NSManaged var answerBreakdown : [String : Int]
     @IBAction func submitButtonAction(sender: AnyObject) {
         print("Submit button")
         let x = self.form.values()
+        let questionType = x["Question Type"] as! String
+        var answers = [String]()
+        var answerBreakdown = [String : Int]()
+        let text = x ["questionTextArea"] as! String
+        for i in 0..<self.answerNumber {
+            let answer = x["choice\(i)"] as! String
+            answers.append(answer)
+            answerBreakdown[answer] = 0
+        }
+        
+        let newQuestion = Question()
+        newQuestion.answerBreakdown = answerBreakdown
+        newQuestion.text = text
+        newQuestion.answers = answers
+        newQuestion.questionType = QuestionType.determineTypeFromString(questionType)!.rawValue
+        newQuestion.numCorrectAnswers = 0
+        newQuestion.numIncorrectAnswers = 0
+        
+        newQuestion.saveInBackgroundWithBlock { (success, error) -> Void in
+            if error == nil && success {
+                self.currentClassSession.questions.addObject(newQuestion)
+                self.currentClassSession.saveInBackgroundWithBlock({ (success, error) -> Void in
+                    if error == nil && success {
+                        print("Successfully added a question")
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+                })
+            }
+        }
+        
         print("x")
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

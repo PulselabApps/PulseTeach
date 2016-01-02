@@ -18,6 +18,8 @@
 		124F32591C31D6A800FC6AA6 /* ClassIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F32581C31D6A800FC6AA6 /* ClassIconCollectionViewCell.swift */; };
 		124F325B1C31D72900FC6AA6 /* ClassesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F325A1C31D72900FC6AA6 /* ClassesCollectionViewController.swift */; };
 		124F325D1C31D86D00FC6AA6 /* ClassCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F325C1C31D86D00FC6AA6 /* ClassCollectionModel.swift */; };
+		124F325F1C32F45000FC6AA6 /* ClassSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F325E1C32F45000FC6AA6 /* ClassSummaryViewController.swift */; };
+		124F32611C32F47300FC6AA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F32601C32F47300FC6AA6 /* Constants.swift */; };
 		1251C90F1C2A02F200EB2B43 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1251C90C1C2A02F200EB2B43 /* Question.swift */; };
 		1251C9101C2A02F200EB2B43 /* ClassSession_Beta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1251C90D1C2A02F200EB2B43 /* ClassSession_Beta.swift */; };
 		1251C9111C2A02F200EB2B43 /* PulseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1251C90E1C2A02F200EB2B43 /* PulseClass.swift */; };
@@ -58,6 +60,8 @@
 		124F32581C31D6A800FC6AA6 /* ClassIconCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassIconCollectionViewCell.swift; sourceTree = "<group>"; };
 		124F325A1C31D72900FC6AA6 /* ClassesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesCollectionViewController.swift; sourceTree = "<group>"; };
 		124F325C1C31D86D00FC6AA6 /* ClassCollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCollectionModel.swift; sourceTree = "<group>"; };
+		124F325E1C32F45000FC6AA6 /* ClassSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassSummaryViewController.swift; sourceTree = "<group>"; };
+		124F32601C32F47300FC6AA6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1251C90C1C2A02F200EB2B43 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		1251C90D1C2A02F200EB2B43 /* ClassSession_Beta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassSession_Beta.swift; sourceTree = "<group>"; };
 		1251C90E1C2A02F200EB2B43 /* PulseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseClass.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				123AE47C1C29F90D0008CB21 /* Assets.xcassets */,
 				123AE47E1C29F90D0008CB21 /* LaunchScreen.storyboard */,
 				123AE4811C29F90D0008CB21 /* Info.plist */,
+				124F32601C32F47300FC6AA6 /* Constants.swift */,
 			);
 			path = PulseTeach;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				123AE4771C29F90D0008CB21 /* ViewController.swift */,
 				1251C9131C2A033800EB2B43 /* AddQuestionFormViewController.swift */,
 				124F325A1C31D72900FC6AA6 /* ClassesCollectionViewController.swift */,
+				124F325E1C32F45000FC6AA6 /* ClassSummaryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1251C90F1C2A02F200EB2B43 /* Question.swift in Sources */,
+				124F32611C32F47300FC6AA6 /* Constants.swift in Sources */,
 				124F325B1C31D72900FC6AA6 /* ClassesCollectionViewController.swift in Sources */,
 				123AE4781C29F90D0008CB21 /* ViewController.swift in Sources */,
 				1251C9141C2A033800EB2B43 /* AddQuestionFormViewController.swift in Sources */,
@@ -392,6 +399,7 @@
 				1251C9101C2A02F200EB2B43 /* ClassSession_Beta.swift in Sources */,
 				124F325D1C31D86D00FC6AA6 /* ClassCollectionModel.swift in Sources */,
 				1251C9111C2A02F200EB2B43 /* PulseClass.swift in Sources */,
+				124F325F1C32F45000FC6AA6 /* ClassSummaryViewController.swift in Sources */,
 				124F32591C31D6A800FC6AA6 /* ClassIconCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
