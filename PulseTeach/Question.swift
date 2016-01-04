@@ -24,6 +24,17 @@ extension QuestionType {
             return nil
         }
     }
+    
+    func typeName() -> String? {
+        switch self {
+        case .MultipleChoice:
+            return "Multiple Choice"
+        case .FillInTheBlank:
+            return "Fill in The Blank"
+        default:
+            return nil
+        }
+    }
 }
 
 class Question: PFObject, PFSubclassing {

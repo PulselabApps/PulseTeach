@@ -12,6 +12,7 @@ class ClassSummaryViewController: UIViewController {
 
     @IBOutlet var addQuestionButton: UIButton!
     
+    
     var currentClass : PulseClass!
     
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class ClassSummaryViewController: UIViewController {
         self.view.backgroundColor = ColorConstants.GrayNormalButtonColor
         // Do any additional setup after loading the view.
         self.navigationItem.title = currentClass.name
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +43,10 @@ class ClassSummaryViewController: UIViewController {
                     addQuestionVC.currentClass = currentClass
                 }
                 
+            }
+        } else if segue.identifier == "tableEmbed" {
+            if let destVC = segue.destinationViewController as? ClassSessionsTableViewController {
+                destVC.currentClass = self.currentClass
             }
         }
     }

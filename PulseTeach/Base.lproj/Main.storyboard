@@ -63,6 +63,133 @@
             </objects>
             <point key="canvasLocation" x="2494" y="475"/>
         </scene>
+        <!--Question Detail View Controller-->
+        <scene sceneID="n0C-Ge-JI9">
+            <objects>
+                <viewController id="GPX-t6-uot" customClass="QuestionDetailViewController" customModule="PulseTeach" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fa9-cl-dmw"/>
+                        <viewControllerLayoutGuide type="bottom" id="eo4-5l-zAo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JQ1-CJ-RYX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-qy-YYy">
+                                <rect key="frame" x="20" y="83.5" width="560" height="433"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="FyG-UO-S5s"/>
+                                    <constraint firstAttribute="height" constant="433" id="a8F-aD-JjK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eXz-qy-YYy" firstAttribute="centerX" secondItem="JQ1-CJ-RYX" secondAttribute="centerX" id="OpY-G6-tI4"/>
+                            <constraint firstItem="eXz-qy-YYy" firstAttribute="centerY" secondItem="JQ1-CJ-RYX" secondAttribute="centerY" id="jbI-Nz-P9d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="eXz-qy-YYy" id="mXL-6J-9cW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIn-Ch-YIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2410" y="-1031"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="fIm-eQ-FaS">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="yYR-h4-HL9" customClass="QuestionsQueryTableViewController" customModule="PulseTeach" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TGe-35-U4t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionQueryCell" id="KLu-we-TQv" customClass="PFTableViewCell">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KLu-we-TQv" id="F18-LJ-f3G">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yYR-h4-HL9" id="7Zb-Xa-p1D"/>
+                            <outlet property="delegate" destination="yYR-h4-HL9" id="LsU-kW-gu9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="XKn-yE-cfT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w0z-qf-KfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3112" y="-1756"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xd5-FF-ZS0">
+            <objects>
+                <navigationController id="Ns5-yH-rQ5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5dM-C4-xUi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yYR-h4-HL9" kind="relationship" relationship="rootViewController" id="JfH-tQ-pmK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NhN-pk-qG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2312" y="-1738"/>
+        </scene>
+        <!--Split Container View Controller-->
+        <scene sceneID="tf2-DY-1Db">
+            <objects>
+                <viewController storyboardIdentifier="splitEmbedVC" id="G8G-tY-6EU" customClass="SplitContainerViewController" customModule="PulseTeach" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qJZ-71-Wro"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cpn-ol-opx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vgr-CS-yFR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqF-bc-xoz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="QhM-0i-ygJ" kind="embed" identifier="splitEmbedOne" id="drf-Nb-AcF"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cpn-ol-opx" firstAttribute="top" secondItem="fqF-bc-xoz" secondAttribute="bottom" id="JKn-rk-iD9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fqF-bc-xoz" secondAttribute="trailing" constant="-20" id="Nx7-sY-fEC"/>
+                            <constraint firstItem="fqF-bc-xoz" firstAttribute="top" secondItem="Vgr-CS-yFR" secondAttribute="topMargin" id="YsB-Yy-62m"/>
+                            <constraint firstItem="fqF-bc-xoz" firstAttribute="leading" secondItem="Vgr-CS-yFR" secondAttribute="leadingMargin" constant="-20" id="lF3-8o-yaW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wbj-00-ubl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-1323"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="8d0-a4-Qc4">
+            <objects>
+                <splitViewController storyboardIdentifier="sessionSplitSummary" id="QhM-0i-ygJ" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="Ns5-yH-rQ5" kind="relationship" relationship="masterViewController" id="7WV-JF-0yD"/>
+                        <segue destination="GPX-t6-uot" kind="relationship" relationship="detailViewController" id="hPc-LQ-00i"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zne-K8-9p7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460" y="-1359"/>
+        </scene>
         <!--Classes Collection View Controller-->
         <scene sceneID="Pf9-te-Ld1">
             <objects>
@@ -142,19 +269,23 @@
                                     <segue destination="H6G-0X-Uun" kind="presentation" identifier="addQuestionSegue" modalPresentationStyle="formSheet" id="U8D-Ut-Tes"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpf-IE-FYq">
-                                <rect key="frame" x="20" y="252" width="560" height="328"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHF-Nw-7pn">
+                                <rect key="frame" x="0.0" y="94" width="278" height="506"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="9gV-7d-bUn"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="M5I-Ml-Hh9" kind="embed" identifier="tableEmbed" id="mZz-Th-hPx"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cIL-uu-hPB" secondAttribute="trailing" constant="-12" id="F91-Lj-wvv"/>
                             <constraint firstItem="cIL-uu-hPB" firstAttribute="top" secondItem="Khd-tb-80a" secondAttribute="bottom" id="Kfx-2o-18S"/>
-                            <constraint firstItem="wpf-IE-FYq" firstAttribute="top" secondItem="cIL-uu-hPB" secondAttribute="bottom" constant="149" id="Smm-5Y-fRv"/>
-                            <constraint firstItem="wpf-IE-FYq" firstAttribute="leading" secondItem="b2I-iu-wFM" secondAttribute="leadingMargin" id="jS6-ge-Bxb"/>
-                            <constraint firstItem="a1a-Eb-SrE" firstAttribute="top" secondItem="wpf-IE-FYq" secondAttribute="bottom" constant="20" id="jd8-KD-Qnn"/>
-                            <constraint firstItem="wpf-IE-FYq" firstAttribute="trailing" secondItem="b2I-iu-wFM" secondAttribute="trailingMargin" id="swB-SU-u8H"/>
+                            <constraint firstItem="a1a-Eb-SrE" firstAttribute="top" secondItem="gHF-Nw-7pn" secondAttribute="bottom" id="ZaD-Oy-zjD"/>
+                            <constraint firstItem="gHF-Nw-7pn" firstAttribute="top" secondItem="Khd-tb-80a" secondAttribute="bottom" constant="30" id="ocf-yl-Tbs"/>
+                            <constraint firstItem="gHF-Nw-7pn" firstAttribute="leading" secondItem="b2I-iu-wFM" secondAttribute="leadingMargin" constant="-20" id="rk1-mN-7DV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -164,6 +295,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBV-KR-L52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2513" y="-255"/>
+        </scene>
+        <!--Class Sessions Table View Controller-->
+        <scene sceneID="EpQ-Fg-64d">
+            <objects>
+                <tableViewController id="M5I-Ml-Hh9" customClass="ClassSessionsTableViewController" customModule="PulseTeach" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ftl-nA-dna">
+                        <rect key="frame" x="0.0" y="0.0" width="278" height="506"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sessionResuseCell" id="w3q-Sc-KNd" customClass="PFTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="278" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w3q-Sc-KNd" id="E5C-SX-bfp">
+                                    <rect key="frame" x="0.0" y="0.0" width="278" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M5I-Ml-Hh9" id="Pj6-Wp-Bep"/>
+                            <outlet property="delegate" destination="M5I-Ml-Hh9" id="YO3-ql-MSa"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjV-FL-1Rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3302" y="-409"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XFi-DP-ztU">
