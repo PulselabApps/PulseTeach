@@ -14,9 +14,12 @@ class QuestionDetailViewController: UIViewController, QuestionDetailDelegate {
 
     @IBOutlet var textLabel: UILabel!
     
+    var currentSession : ClassSession_Beta!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     }
 
@@ -27,21 +30,24 @@ class QuestionDetailViewController: UIViewController, QuestionDetailDelegate {
     
     func questionSelected(question : PFObject) {
         let text = question["text"] as! String
-        
+
         textLabel.numberOfLines = 0
         textLabel.lineBreakMode = .ByWordWrapping
         textLabel.text = text
     }
     
+    
+    
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
 }

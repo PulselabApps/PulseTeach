@@ -13,24 +13,24 @@ class AddQuestionFormViewController: FormViewController {
 
     var answerNumber = 0
     
-    var currentClass : PulseClass!
+//    var currentClass : PulseClass!
     
     var currentClassSession : ClassSession_Beta!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let query = ClassSession_Beta.query()!
-        query.orderByDescending("updatedAt")
-        query.whereKey("classIn", equalTo: self.currentClass)
-        query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
-            if error == nil {
-                if let session = object as? ClassSession_Beta {
-                    self.currentClassSession = session
-                    print("Found Session")
-                }
-            }
-        }
+//        let query = ClassSession_Beta.query()!
+//        query.orderByDescending("updatedAt")
+//        query.whereKey("classIn", equalTo: self.currentClass)
+//        query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
+//            if error == nil {
+//                if let session = object as? ClassSession_Beta {
+//                    self.currentClassSession = session
+//                    print("Found Session")
+//                }
+//            }
+//        }
         
         form +++ Section("Question Type")
         

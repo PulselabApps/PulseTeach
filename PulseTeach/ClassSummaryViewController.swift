@@ -10,7 +10,6 @@ import UIKit
 
 class ClassSummaryViewController: UIViewController {
 
-    @IBOutlet var addQuestionButton: UIButton!
     
     
     var currentClass : PulseClass!
@@ -36,15 +35,16 @@ class ClassSummaryViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "addQuestionSegue" {
-            if let destVC = segue.destinationViewController as? UINavigationController {
-                if let addQuestionVC = destVC.topViewController as? AddQuestionFormViewController {
-                    print("Blargh question")
-                    addQuestionVC.currentClass = currentClass
-                }
-                
-            }
-        } else if segue.identifier == "tableEmbed" {
+//        if segue.identifier == "addQuestionSegue" {
+//            if let destVC = segue.destinationViewController as? UINavigationController {
+//                if let addQuestionVC = destVC.topViewController as? AddQuestionFormViewController {
+//                    print("Blargh question")
+//                    addQuestionVC.currentClass = currentClass
+//                }
+//                
+//            }
+//        } else
+        if segue.identifier == "tableEmbed" {
             if let destVC = segue.destinationViewController as? ClassSessionsTableViewController {
                 destVC.currentClass = self.currentClass
             }

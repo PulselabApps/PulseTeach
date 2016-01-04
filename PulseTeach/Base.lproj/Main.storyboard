@@ -172,10 +172,13 @@
                             <constraint firstItem="fqF-bc-xoz" firstAttribute="leading" secondItem="Vgr-CS-yFR" secondAttribute="leadingMargin" constant="-20" id="lF3-8o-yaW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="H6G-0X-Uun" kind="presentation" identifier="addQuestionSegue" modalPresentationStyle="formSheet" id="K4z-Qz-Vr6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbj-00-ubl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="-1323"/>
+            <point key="canvasLocation" x="1192" y="-653"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="8d0-a4-Qc4">
@@ -261,14 +264,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIL-uu-hPB">
-                                <rect key="frame" x="467" y="64" width="125" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="22"/>
-                                <state key="normal" title="Add Question"/>
-                                <connections>
-                                    <segue destination="H6G-0X-Uun" kind="presentation" identifier="addQuestionSegue" modalPresentationStyle="formSheet" id="U8D-Ut-Tes"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHF-Nw-7pn">
                                 <rect key="frame" x="0.0" y="94" width="278" height="506"/>
                                 <constraints>
@@ -281,16 +276,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="cIL-uu-hPB" secondAttribute="trailing" constant="-12" id="F91-Lj-wvv"/>
-                            <constraint firstItem="cIL-uu-hPB" firstAttribute="top" secondItem="Khd-tb-80a" secondAttribute="bottom" id="Kfx-2o-18S"/>
                             <constraint firstItem="a1a-Eb-SrE" firstAttribute="top" secondItem="gHF-Nw-7pn" secondAttribute="bottom" id="ZaD-Oy-zjD"/>
                             <constraint firstItem="gHF-Nw-7pn" firstAttribute="top" secondItem="Khd-tb-80a" secondAttribute="bottom" constant="30" id="ocf-yl-Tbs"/>
                             <constraint firstItem="gHF-Nw-7pn" firstAttribute="leading" secondItem="b2I-iu-wFM" secondAttribute="leadingMargin" constant="-20" id="rk1-mN-7DV"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="addQuestionButton" destination="cIL-uu-hPB" id="UW8-mx-InP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBV-KR-L52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -340,7 +330,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBp-jU-Y1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847" y="466"/>
+            <point key="canvasLocation" x="519" y="-614"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K3h-1L-tlg">

@@ -14,7 +14,12 @@ class SplitContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        self.navigationItem.title = String(currentSession.createdAt!)
+        self.navigationItem.title = "Question Detail"
+        
+        let navbutton = UIBarButtonItem(title: "Add Question", style: .Plain, target: self, action: "addQuestion:")
+        self.navigationItem.rightBarButtonItem = navbutton
         // Do any additional setup after loading the view.
     }
 
@@ -23,7 +28,10 @@ class SplitContainerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func addQuestion(sender : AnyObject?) {
+        print("Blah")
+        self.performSegueWithIdentifier("addQuestionSegue", sender: nil)
+    }
     
     // MARK: - Navigation
 
@@ -42,6 +50,10 @@ class SplitContainerViewController: UIViewController {
                         splitVC.preferredDisplayMode = .AllVisible
                     }
                 }
+            }
+        } else if segue.identifier == "addQuestionSegue" {
+            if let destVC = segue.destinationViewController as? AddQuestionFormViewController {
+                destVC.currentClassSession = self.currentSession
             }
         }
     }
